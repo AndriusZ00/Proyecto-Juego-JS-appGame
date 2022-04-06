@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="juego,game,juego-retro,naves,proyecto,project-game,developer,programming">
+    <meta name="description" content="Juego orientado al g&eacute;nero de disparos, realizado con tecnologias front-end (Html5,Css3,Java Script)">
+    <meta name="author" content="Andrius Z">
+    <meta name="copyright" content="Andrius Z">
+    <meta name="robots" content="index">
+    <link type="text/css" rel="stylesheet" href="/Recursos/style.css">
+    <link type="text/css" rel="stylesheet" href="/Recursos/normalize.css">
+    <title>Game Space</title>
+</head>
+<body>
+    <main class="main-game">
+        <section class="main-game__mark" id="mark">
+            <h4 class="main-game__h4">
+                <img class="main-game__item" src="../images/puntuacion.png" alt="Puntuacion" title="Puntuacion">
+                <span>
+                    Puntuacion:<span id="puntuacion"></span>
+                </span>
+            </h4>
+            <h4 class="main-game__h4">
+                <img class="main-game__item" src="../images/lives.png" alt="Lives" title="Lives">
+                <span>
+                    Vidas:<span id="lives"></span>
+                </span>
+            </h4>
+            <h4 class="main-game__h4 main-game__h4--dif">
+                <img class="main-game__item" src="../images/records.png" alt="Records" title="Records">
+                <span>
+                    Record:<span id="record">0</span>
+                </span>
+            </h4>
+        </section>
+        <canvas class="canvas" id="canvas"></canvas>
+    </main>
+    <script src="/Recursos/appgame.js"></script>
+</body>
+</html>

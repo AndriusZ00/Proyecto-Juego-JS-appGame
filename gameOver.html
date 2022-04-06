@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="juego,game,juego-retro,naves,proyecto,project-game,developer,programming">
+    <meta name="description" content="Juego orientado al g&eacute;nero de disparos, realizado con tecnologias front-end (Html5,Css3,Java Script)">
+    <meta name="author" content="Andrius Z">
+    <meta name="copyright" content="Andrius Z">
+    <meta name="robots" content="index">
+    <link type="text/css" rel="stylesheet" href="/Recursos/style.css">
+    <link type="text/css" rel="stylesheet" href="/Recursos/normalize.css">
+    <title>Game Space</title>
+</head>
+<body>
+   <main class="main-gameOver">
+        <audio autoplay src="audio/gameOver.mp3"></audio>
+        <h1 class="main-gameOver__h1">Game Over</h1>
+        <figure>
+            <img class="main-gameOver__img" src="images/gameOver.png" alt="Game over" title="Game over">
+        </figure>
+        <button class="btn-play2">
+            <span class="span1 span"></span>
+            <span class="span2 span"></span>
+            <span class="span3 span"></span>
+            <span class="span4 span"></span>
+            Jugar de nuevo
+        </button>
+   </main>
+   <script>
+        const iframeGame =  document.querySelector(".iframe-game");
+        const buttonReloadGame = document.querySelector(".btn-play2");
+        buttonReloadGame.addEventListener("click",() => iframeGame.src = "../game.html");
+   </script>
+</body>
+</html>

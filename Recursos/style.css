@@ -1,0 +1,179 @@
+* {
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    background-color:#000;
+}
+/* =============================== Variables =============================== */
+:root {
+        --color-title: rgb(174, 0, 255);
+        --color-spacing : rgb(174, 0, 255);
+        --color-Button: #a945c7;
+        --color-mark: rgb(251, 0, 155);
+    }
+
+/* =============================== Main Index game =============================== */
+.main-game {
+    width: 100%;
+    height: 100vh;
+}
+/* =============================== Section mark =============================== */
+.main-game__mark {
+    display: flex;
+    justify-content: flex-end;
+}
+.main-game__h4 {
+    font-size: 1em;
+    display: inline-block;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-right: 1em;
+    box-shadow: inset 0em 0em 2px 0.1em var(--color-mark),
+    0em 0em 0px 0.2em var(--color-mark);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 0.3em 0.8em;
+    color: #fff;
+}
+.main-game__h4--dif {
+    margin-right: 13%;
+}
+.main-game__item {
+    width: 0.8em;
+}
+.iframe-game {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+    border: none;
+}
+.canvas {
+    display: flex;
+    margin: auto;
+    border: 1em solid rgb(65, 65, 65);
+    box-shadow: 0em 0em 0.4em 0.1em var(--color-mark);
+}
+/* =============================== Main Index game over =============================== */
+.main-gameOver {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-gameOver__img {
+    width: 35vw;
+}
+.btn-play,
+.btn-play2 {
+    background: transparent;
+    border: none;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    transition-delay: 0.6s;
+    cursor: pointer;
+}
+.btn-play {
+    margin-left: 4em;
+}
+.btn-play2 {
+    margin-top: 2em;
+}
+.span {
+    position: absolute;
+    display: block;
+}
+.span1,
+.span3 {
+    width: 100%;
+    height: 2px;
+}
+.span2,
+.span4 {
+    width: 2px;
+    height: 100%;
+}
+.span1 {
+    top: 0;
+    left: -90%;
+    background: linear-gradient(90deg,transparent,var(--color-Button));
+}
+.span2 {
+    top: -6%;
+    right: 0;
+    background: linear-gradient(180deg,transparent,var(--color-Button));
+}
+.span3 {
+    bottom: 0;
+    right: -90%;
+    background: linear-gradient(270deg,transparent,var(--color-Button));
+}
+.span4 {
+    bottom: -6%;
+    left: 0;
+    background: linear-gradient(360deg,transparent,var(--color-Button));
+}
+
+/* =============================== Media query =============================== */
+@media only screen and (max-width: 1040px) {
+    .btn-play,
+    .btn-play2 {
+        font-size: 1rem;
+        width: 13em;
+        padding: 0.6em;
+    }
+}
+@media only screen and (max-width: 955px){
+    /* =============================== Section lobby =============================== */
+    .btn-play,
+    .btn-play2 {
+        font-size: 1rem;
+        width: 10em;
+        padding: 0.5em;
+    }
+    .section-lobby__img {
+        width: 70%;
+        margin-left: 20%
+    }
+    .section-lobby__figure {
+        margin-left: 10%
+    }
+}
+/* =============================== Section lobby (Hover)=============================== */
+.btn-play:hover,
+.btn-play2:hover {
+    background-color: #a945c7;
+    box-shadow: 0 0 10px #a945c7,
+    0 0 40px #a945c7,
+    0 0 80px #a945c7;
+}
+.btn-play2:hover .span1,
+.btn-play:hover .span1 {
+    left: 100%;
+    transition: 1s;
+}
+.btn-play:hover .span3,
+.btn-play2:hover .span3 {
+    right: 100%;
+    transition: 1s;
+    transition: 0.5s;
+}
+.btn-play:hover .span2,
+.btn-play2:hover .span2 {
+    top: 100%;
+    transition: 1s;
+    transition: 0.25s;
+} 
+.btn-play:hover .span4,
+.btn-play2:hover .span4 {
+    bottom: 100%;
+    transition: 1s;
+    transition: 0.75s;
+}
